@@ -1,0 +1,64 @@
+{
+  "paths": {
+    "external_samroad_root": "",
+    "baseline_config": "",
+    "sam_checkpoint": "",
+    "data_root": "",
+    "prospective_manifest": "configs/splits/outer.json",
+    "inner_manifest": "configs/splits/inner.json"
+  },
+  "native_graph_protocol": {
+    "PATCH_SIZE": 256,
+    "ITSC_THRESHOLD": 0.195,
+    "ROAD_THRESHOLD": 0.341,
+    "TOPO_THRESHOLD": 0.705,
+    "ITSC_NMS_RADIUS": 8,
+    "ROAD_NMS_RADIUS": 16,
+    "NEIGHBOR_RADIUS": 64,
+    "MAX_NEIGHBOR_QUERIES": 16,
+    "INFER_PATCHES_PER_EDGE": 8,
+    "INFER_BATCH_SIZE": 1,
+    "SAMPLE_MARGIN": 0,
+    "TOPO_SAMPLE_NUM": 128
+  },
+  "seeds": [
+    20260916
+  ],
+  "completion": {
+    "query_count": 12,
+    "num_predictions": 3,
+    "max_step_pixels": 30.0,
+    "target_step_pixels": 24.0,
+    "roi_size": 5,
+    "roi_radius_pixels": 32.0,
+    "hidden_dim": 128,
+    "heads": 4,
+    "layers": 2,
+    "ffn_dim": 256,
+    "dropout": 0.1,
+    "max_epochs": 20,
+    "min_epochs": 20,
+    "patience": 100,
+    "minimum_relative_improvement": 0.0,
+    "samples_per_epoch": 24576,
+    "holdout_samples": 4096,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "class_loss_weight": 1.0,
+    "coordinate_loss_weight": 5.0,
+    "direction_loss_weight": 1.0,
+    "terminal_sample_fraction": 0.25,
+    "modes": [
+      "full"
+    ],
+    "fixed_holdout": true
+  },
+  "inference": {
+    "score_threshold": 0.5,
+    "merge_distance": 10.0,
+    "rounds": 3,
+    "same_direction_cosine": 0.94,
+    "max_step_pixels": 30.0,
+    "precision": "fp32"
+  }
+}

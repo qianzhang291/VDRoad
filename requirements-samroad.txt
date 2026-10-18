@@ -1,0 +1,30 @@
+# Optional SAM-Road integration dependencies (Python 3.12).
+# Install the local endpoint-completion package separately (`pip install -e .`).
+# Supply the official SAM-Road checkout and checkpoints explicitly; not bundled.
+
+# Completion core and the SAM/SAM-Road visual encoder.
+numpy==2.5.2
+torch==2.7.1
+torchvision==0.22.1
+Pillow==12.3.0
+
+# SAM-Road model, native dataset, graph utilities, and graph extraction imports.
+opencv-python-headless==5.0.0.93
+scipy==1.18.1
+scikit-image==0.26.0
+scikit-learn==1.9.0
+rtree==1.4.1
+addict==2.4.0
+networkx==3.6.1
+shapely==2.1.2
+matplotlib==3.11.1
+igraph==1.0.0
+tcod==21.2.1
+torchmetrics==1.8.2
+lightning==2.5.6
+# Upstream model.py imports wandb directly, including when logging is disabled.
+wandb==0.28.2
+PyYAML==6.0.3
+
+# The upstream native inferencer additionally imports imageio.
+imageio==2.37.4
